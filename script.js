@@ -59,15 +59,14 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 // ============================================
-// TYPEWRITER
+// TYPEWRITER - Static "Medical Virtual Assistant &" + cycles through others
 // ============================================
 const typewriterElement = document.getElementById('typewriterText');
 const phrases = [
-    'Medical Virtual Assistant',
+    'Registered Nurse',
     'EMR & Telehealth Specialist',
-    'HIPAA-Trained Professional',
-    'Healthcare Administrator',
-    'Registered Nurse'
+    'HIPAA-Certified Professional',
+    'Healthcare Administrator'
 ];
 let phraseIndex = 0,
     charIndex = 0,
@@ -234,7 +233,7 @@ function initECG() {
 setTimeout(initECG, 500);
 
 // ============================================
-// PARTICLES
+// PARTICLES — FLOATING MEDICAL ICONS (FIXED)
 // ============================================
 function createParticles() {
     const container = document.getElementById('particlesContainer');
@@ -256,6 +255,8 @@ function createParticles() {
         container.appendChild(particle);
     }
 }
+// ===== CALL THE PARTICLES FUNCTION =====
+createParticles();
 
 // ============================================
 // 3D TILT
@@ -408,27 +409,16 @@ modalOverlay.addEventListener('click', function (e) { if (e.target === this) clo
 document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 
 // ============================================
-// WORK SAMPLES — CONTINUOUS SLOW SCROLL (45 seconds)
+// WORK SAMPLES — CONTINUOUS SLOW SCROLL (60 seconds)
 // ============================================
 const workTrack = document.getElementById('workSamplesTrack');
 
 function initWorkContinuousScroll() {
-    if (!workTrack) {
-        console.warn('⚠️ Work track not found!');
-        return;
-    }
-
+    if (!workTrack) return;
     const cards = workTrack.querySelectorAll('.work-sample-item');
     const totalCards = cards.length;
+    if (totalCards === 0) return;
 
-    console.log(`✅ Work continuous scroll initializing with ${totalCards} cards`);
-
-    if (totalCards === 0) {
-        console.warn('⚠️ No work cards found!');
-        return;
-    }
-
-    // Clone cards for seamless looping
     const cardsArray = Array.from(cards);
     cardsArray.forEach(card => {
         const clone = card.cloneNode(true);
@@ -436,13 +426,9 @@ function initWorkContinuousScroll() {
         workTrack.appendChild(clone);
     });
 
-    // Get the width of the original set (half of total track width)
     const totalWidth = workTrack.scrollWidth / 2;
-
-    // Duration for a full cycle — slower (60 seconds)
     const duration = 60;
 
-    // Kill any existing animation
     if (window.workAnimationId) {
         cancelAnimationFrame(window.workAnimationId);
         window.workAnimationId = null;
@@ -457,24 +443,18 @@ function initWorkContinuousScroll() {
             window.workAnimationId = requestAnimationFrame(animateWorkScroll);
             return;
         }
-
         if (startTime === null) {
             startTime = timestamp - pausedTime;
         }
-
         const elapsed = (timestamp - startTime) / 1000;
         const progress = (elapsed % duration) / duration;
         const x = -progress * totalWidth;
-
         workTrack.style.transform = `translateX(${x}px)`;
-
         window.workAnimationId = requestAnimationFrame(animateWorkScroll);
     }
 
-    // Start animation
     window.workAnimationId = requestAnimationFrame(animateWorkScroll);
 
-    // Pause on hover
     const wrapper = workTrack.closest('.work-samples-carousel-wrapper');
     if (wrapper) {
         wrapper.addEventListener('mouseenter', () => {
@@ -484,20 +464,17 @@ function initWorkContinuousScroll() {
                 pausedTime = elapsed;
             }
         });
-
         wrapper.addEventListener('mouseleave', () => {
             isPaused = false;
             startTime = performance.now() - pausedTime * 1000;
         });
     }
 
-    // Store for resize handling
     window._workTrack = workTrack;
     window._workTotalWidth = totalWidth;
     window._workDuration = duration;
 }
 
-// Initialize work carousel on DOM ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         setTimeout(initWorkContinuousScroll, 200);
@@ -506,20 +483,15 @@ if (document.readyState === 'loading') {
     setTimeout(initWorkContinuousScroll, 200);
 }
 
-// Handle resize for work carousel
 let workResizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(workResizeTimeout);
     workResizeTimeout = setTimeout(() => {
         if (!workTrack) return;
-
-        // Kill existing animation
         if (window.workAnimationId) {
             cancelAnimationFrame(window.workAnimationId);
             window.workAnimationId = null;
         }
-
-        // Remove clones (keep only original cards)
         const cards = workTrack.querySelectorAll('.work-sample-item');
         const cardsArray = Array.from(cards);
         if (window._originalCount) {
@@ -542,18 +514,16 @@ window.addEventListener('resize', () => {
                 });
             }
         }
-
-        // Re-initialize
         initWorkContinuousScroll();
     }, 300);
 });
 
 // ============================================
-// TESTIMONIALS AUTO CAROUSEL (Every 3 seconds)
+// TESTIMONIALS AUTO CAROUSEL (3-second intervals)
 // ============================================
-const track = document.getElementById('testimonialCarouselTrack'),
+const trackTest = document.getElementById('testimonialCarouselTrack'),
     dotsContainer = document.getElementById('testimonialDots'),
-    items = track.querySelectorAll('.testimonial-carousel-item'),
+    items = trackTest.querySelectorAll('.testimonial-carousel-item'),
     totalItems = items.length;
 let currentIndex = 0,
     autoSlideInterval,
@@ -589,7 +559,7 @@ function goToSlide(index) {
     if (currentIndex < 0) currentIndex = 0;
     const gap = 30,
         itemWidth = items[0].offsetWidth || 300;
-    track.style.transform = `translateX(-${currentIndex * (itemWidth + gap)}px)`;
+    trackTest.style.transform = `translateX(-${currentIndex * (itemWidth + gap)}px)`;
     const dots = dotsContainer.querySelectorAll('.dot'),
         activeDotIndex = Math.floor(currentIndex / itemsPerView);
     dots.forEach((dot, i) => dot.classList.toggle('active', i === activeDotIndex));
@@ -597,77 +567,42 @@ function goToSlide(index) {
 }
 
 function nextSlide() {
-    const itemsPerView = getItemsPerView(),
-        maxIndex = totalItems - itemsPerView;
-    goToSlide(currentIndex + itemsPerView >= maxIndex ? 0 : currentIndex + itemsPerView);
-}
-
-function startAutoSlide() {
-    if (autoSlideInterval) clearInterval(autoSlideInterval);
-    autoSlideInterval = setInterval(nextSlide, 3000);
+    const itemsPerView = getItemsPerView();
+    goToSlide(currentIndex + itemsPerView);
+    if (currentIndex + itemsPerView >= totalItems) {
+        setTimeout(() => {
+            currentIndex = 0;
+            trackTest.style.transition = 'none';
+            const gap = 30,
+                itemWidth = items[0].offsetWidth || 300;
+            trackTest.style.transform = `translateX(0px)`;
+            const dots = dotsContainer.querySelectorAll('.dot');
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === 0));
+            setTimeout(() => { trackTest.style.transition = ''; }, 50);
+        }, 800);
+    }
 }
 
 function resetAutoSlide() {
-    if (autoSlideInterval) {
-        clearInterval(autoSlideInterval);
-        startAutoSlide();
-    }
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(nextSlide, 3000);
 }
+
 createDots();
-startAutoSlide();
-
-let resizeTimeout;
+autoSlideInterval = setInterval(nextSlide, 3000);
 window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-        createDots();
-        goToSlide(currentIndex);
-        resetAutoSlide();
-    }, 300);
+    createDots();
+    goToSlide(0);
+    resetAutoSlide();
 });
-const carouselWrapper = document.querySelector('.testimonial-carousel-wrapper');
-carouselWrapper.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
-carouselWrapper.addEventListener('mouseleave', startAutoSlide);
-
-// ============================================
-// CONTACT FORM
-// ============================================
-const form = document.getElementById('contactForm');
-if (form) {
-    form.addEventListener('submit', function (e) {
-        const btn = this.querySelector('.btn');
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        btn.disabled = true;
-    });
-}
 
 // ============================================
 // BACK TO TOP
 // ============================================
-const backToTopBtn = document.getElementById('backToTop');
-if (backToTopBtn) {
-    window.addEventListener('scroll', () => {
-        backToTopBtn.classList.toggle('visible', window.scrollY > 400);
-    });
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
-
-// ============================================
-// INITIALIZE PARTICLES
-// ============================================
-document.addEventListener('DOMContentLoaded', () => {
-    createParticles();
-    let particleTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(particleTimeout);
-        particleTimeout = setTimeout(() => {
-            const container = document.getElementById('particlesContainer');
-            if (container) container.innerHTML = '';
-            createParticles();
-        }, 500);
-    });
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 400);
 });
-
-console.log('🩺 Jesuje Olusegun · Registered Nurse & Medical Virtual Assistant Portfolio ready!');
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});

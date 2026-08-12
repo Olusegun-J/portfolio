@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jesuje Olusegun · Registered Nurse & Medical Virtual Assistant</title>
+    <meta name="description"
+        content="Registered Nurse & HIPAA-Trained Medical Virtual Assistant · EMR & Telehealth Specialist · Helping clinics streamline patient scheduling, documentation, and workflow management." />
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="./assets/favicon.ico" />
+
+    <!-- ===== SOCIAL PREVIEW ===== -->
+    <meta property="og:title" content="Jesuje Olusegun · Registered Nurse & Medical Virtual Assistant" />
+    <meta property="og:description"
+        content="Registered Nurse & HIPAA-Trained Medical Virtual Assistant · EMR & Telehealth Specialist · Helping clinics streamline patient scheduling, documentation, and workflow management." />
+    <meta property="og:url" content="https://Olusegun-J.github.io/portfolio/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://Olusegun-J.github.io/portfolio/assets/jesuje.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jesuje Olusegun · Registered Nurse & Medical Virtual Assistant" />
+    <meta name="twitter:description"
+        content="Registered Nurse & HIPAA-Trained Medical Virtual Assistant · EMR & Telehealth Specialist · Helping clinics streamline patient scheduling, documentation, and workflow management." />
+    <meta name="twitter:image" content="https://Olusegun-J.github.io/portfolio/assets/jesuje.jpg" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ===== PAGE LOADER ===== -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-ring">
+            <div class="loader-ring-spinner"></div>
+        </div>
+        <p class="loader-text">Loading...</p>
+    </div>
+
+    <!-- ===== MORPHING ORBS ===== -->
+    <div class="morphing-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- ===== SPOTLIGHT ===== -->
+    <div class="spotlight" id="spotlight"></div>
+
+    <!-- ===== FLOATING CTA ===== -->
+    <a href="#booking" class="floating-cta magnetic-btn" data-strength="20">
+        <i class="fas fa-calendar-check"></i> Book a Call
+    </a>
+
+    <!-- ===== PROGRESS BAR ===== -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- ===== NOISE OVERLAY ===== -->
+    <div class="noise-overlay"></div>
+
+    <!-- ===== GLOW TRAIL ===== -->
+    <div class="glow-trail" id="glowTrail"></div>
+
+    <!-- ===== CUSTOM CURSOR ===== -->
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- ===== GEOMETRIC SHAPES ===== -->
+    <div class="geometric-shapes" id="geometricShapes"></div>
+
+    <!-- ===== ECG CANVAS ===== -->
+    <canvas id="ecgCanvas"></canvas>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#hero" class="logo">Jesuje<span>.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#work-samples">Samples</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#certifications">Credentials</a></li>
+                <li><a href="#booking">Book</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="particles-container" id="particlesContainer"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-pattern"></div>
+
+        <div class="container hero-container hero-reverse">
+            <div class="hero-content-right">
+                <div class="hero-badge stagger-item">✦ Registered Nurse · HIPAA-Trained Medical VA</div>
+                <h1 class="hero-title">
+                    <span class="stagger-item">Registered Nurse &amp;</span><br />
+                    <span class="typewriter-wrapper stagger-item">
+                        <span id="typewriterText"></span>
+                        <span class="cursor-blink">|</span>
+                    </span>
+                </h1>
+                <p class="hero-subtitle stagger-item">HIPAA-Trained · EMR &amp; Telehealth Specialist · Medical
+                    Administration</p>
+
+                <div class="hero-trust-badges stagger-item">
+                    <span><i class="fas fa-user-md"></i> Registered Nurse</span>
+                    <span><i class="fas fa-shield-alt"></i> HIPAA-Trained</span>
+                    <span><i class="fas fa-file-medical"></i> EMR Specialist</span>
+                    <span><i class="fas fa-video"></i> Telehealth</span>
+                </div>
+
+                <div class="hero-actions stagger-item">
+                    <a href="#booking" class="btn btn-primary btn-ripple magnetic-btn" data-strength="15">Book a
+                        Discovery Call</a>
+                    <a href="#services" class="btn btn-outline magnetic-btn" data-strength="15">View Services</a>
+                </div>
+
+                <div class="trust-badges stagger-item">
+                    <div class="trust-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <span><strong>5+</strong> Years Experience</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-certificate"></i>
+                        <span><strong>BNSc</strong> Nursing Degree</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-hospital"></i>
+                        <span><strong>Multiple</strong> EMR Platforms</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-right stagger-item">
+                <div class="hero-image-new-frame tilt-card floating-hero">
+                    <div class="hero-image-new-inner">
+                        <img src="./assets/Jesuje.jpg" alt="Jesuje Olusegun" />
+                        <div class="hero-image-new-overlay"></div>
+                    </div>
+                    <div class="hero-image-new-dots"></div>
+                    <div class="hero-image-new-badge">✦ RN · MVA</div>
+                </div>
+
+                <div class="hero-stats-bar">
+                    <div class="stat-item">
+                        <strong class="counter" data-target="5">0</strong>
+                        <span>Years Experience</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong class="counter" data-target="449" data-suffix="+">0</strong>
+                        <span>Connections</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong class="counter" data-target="6" data-suffix="+">0</strong>
+                        <span>Roles Held</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span class="scroll-mouse">
+                <span class="scroll-wheel"></span>
+            </span>
+            <span class="scroll-text">Scroll</span>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about reveal" id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-text-side">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Bringing Calm &amp; Clarity to <span>Busy Medical Practices</span></h2>
+                    <p>I'm a <strong>Registered Nurse</strong> and <strong>HIPAA-certified Medical Virtual
+                            Assistant</strong> with a rare blend of clinical insight and operational precision. With
+                        <strong>5+ years</strong> of experience across clinical care, nursing education, and healthcare
+                        administration, I help clinics, hospices, and private practices streamline their daily
+                        operations.
+                    </p>
+                    <p>Advanced EMR/EHR fluency across platforms like <strong>AthenaHealth, Kareo, DrChrono, and
+                            TheraNest</strong> allows me to transform fragmented workflows into streamlined
+                        operations—reducing scheduling conflicts, accelerating insurance verification, and driving
+                        measurable improvements in patient satisfaction scores.</p>
+                    <p><strong>What if your administrative systems worked as hard as you do?</strong> I turn that "what
+                        if" into a daily routine. My approach isn't reactive; it's architectural. I design scalable
+                        systems for telehealth coordination, medical documentation, patient intake, and revenue cycle
+                        support—so your practice runs seamlessly.</p>
+                    <p style="font-weight: 600; color: var(--primary);">The result? You gain back 40 hours a week,
+                        reduce administrative burnout, and reclaim the mental bandwidth to lead, not just manage.
+                        Because when your systems are optimized, your patients feel it—and so do you.</p>
+                    <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px;">
+                        <a href="#booking" class="btn btn-primary btn-ripple magnetic-btn" data-strength="15">Book a
+                            Discovery Call</a>
+                        <a href="./assets/Jesuje_Resume.pdf" download class="btn btn-download btn-ripple magnetic-btn"
+                            data-strength="15">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="about-highlights-cards">
+                    <div class="highlight-card">
+                        <i class="fas fa-user-md"></i>
+                        <h4>Registered Nurse</h4>
+                        <p>Licensed RN with 5+ years of clinical experience and a BNSc degree.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-laptop-medical"></i>
+                        <h4>EMR &amp; Telehealth Specialist</h4>
+                        <p>Fluency across AthenaHealth, Kareo, DrChrono, and TheraNest platforms.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>HIPAA-Trained</h4>
+                        <p>Certified in HIPAA compliance with a deep commitment to patient privacy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TOOLS ===== -->
+    <section class="tools-section reveal" id="tools">
+        <div class="container">
+            <span class="section-tag">My Toolbox</span>
+            <h2 class="section-title">Tools I <span>Master</span></h2>
+            <div class="tools-grid">
+                <div class="tool-card"><i class="fas fa-file-medical"></i><span>AthenaHealth</span></div>
+                <div class="tool-card"><i class="fas fa-file-medical"></i><span>Kareo</span></div>
+                <div class="tool-card"><i class="fas fa-file-medical"></i><span>DrChrono</span></div>
+                <div class="tool-card"><i class="fas fa-file-medical"></i><span>TheraNest</span></div>
+                <div class="tool-card"><i class="fas fa-file-medical"></i><span>Epic Systems</span></div>
+                <div class="tool-card"><i class="fas fa-file-medical"></i><span>Cerner</span></div>
+                <div class="tool-card"><i class="fas fa-file-medical"></i><span>Practice Fusion</span></div>
+                <div class="tool-card"><i class="fas fa-video"></i><span>Doxy.me</span></div>
+                <div class="tool-card"><i class="fas fa-video"></i><span>Zoom Healthcare</span></div>
+                <div class="tool-card"><i class="fas fa-video"></i><span>Telehealth Platforms</span></div>
+                <div class="tool-card"><i class="fas fa-google"></i><span>Google Workspace</span></div>
+                <div class="tool-card"><i class="fab fa-microsoft"></i><span>Microsoft 365</span></div>
+                <div class="tool-card"><i class="fas fa-calendar-alt"></i><span>Calendly</span></div>
+                <div class="tool-card"><i class="fas fa-tasks"></i><span>Asana</span></div>
+                <div class="tool-card"><i class="fas fa-tasks"></i><span>Trello</span></div>
+                <div class="tool-card"><i class="fas fa-file-alt"></i><span>Medical Scribing</span></div>
+                <div class="tool-card"><i class="fas fa-shield-alt"></i><span>HIPAA Compliance</span></div>
+                <div class="tool-card"><i class="fas fa-phone-alt"></i><span>Patient Communication</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services reveal" id="services">
+        <div class="container">
+            <div class="services-header">
+                <span class="section-tag">What I Do</span>
+                <h2 class="section-title">Healthcare <span>Services</span></h2>
+                <p class="section-sub">Comprehensive clinical and administrative support for healthcare teams.</p>
+            </div>
+
+            <div class="services-grid-new">
+                <div class="service-new glass">
+                    <div class="service-new-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Appointment Scheduling</h3>
+                    <p>Efficient patient scheduling, follow-ups, and calendar management.</p>
+                    <span class="service-new-number">01</span>
+                </div>
+                <div class="service-new glass">
+                    <div class="service-new-icon"><i class="fas fa-file-medical"></i></div>
+                    <h3>EMR/EHR Management</h3>
+                    <p>Accurate documentation, medical records management, and data entry.</p>
+                    <span class="service-new-number">02</span>
+                </div>
+                <div class="service-new glass">
+                    <div class="service-new-icon"><i class="fas fa-video"></i></div>
+                    <h3>Telehealth Coordination</h3>
+                    <p>Seamless virtual care support, patient communication, and tech setup.</p>
+                    <span class="service-new-number">03</span>
+                </div>
+                <div class="service-new glass">
+                    <div class="service-new-icon"><i class="fas fa-notes-medical"></i></div>
+                    <h3>Medical Scribing</h3>
+                    <p>Accurate clinical notes, transcription, and comprehensive reporting.</p>
+                    <span class="service-new-number">04</span>
+                </div>
+                <div class="service-new glass">
+                    <div class="service-new-icon"><i class="fas fa-users"></i></div>
+                    <h3>Patient Coordination</h3>
+                    <p>Streamlined patient intake, triage support, and referral coordination.</p>
+                    <span class="service-new-number">05</span>
+                </div>
+                <div class="service-new glass">
+                    <div class="service-new-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Patient Education</h3>
+                    <p>Compassionate patient education and health literacy support.</p>
+                    <span class="service-new-number">06</span>
+                </div>
+                <div class="service-new glass">
+                    <div class="service-new-icon"><i class="fas fa-file-invoice"></i></div>
+                    <h3>Insurance Verification</h3>
+                    <p>HMO coordination, insurance verification, and claims support.</p>
+                    <span class="service-new-number">07</span>
+                </div>
+                <div class="service-new glass">
+                    <div class="service-new-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Entry</h3>
+                    <p>Accurate database management, organization, and reporting.</p>
+                    <span class="service-new-number">08</span>
+                </div>
+                <div class="service-new glass">
+                    <div class="service-new-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>HIPAA Compliance</h3>
+                    <p>Privacy-aware administrative support with strict confidentiality.</p>
+                    <span class="service-new-number">09</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="experience reveal" id="experience">
+        <div class="container">
+            <div class="experience-header">
+                <span class="section-tag">Experience</span>
+                <h2 class="section-title">Where I've <span>Worked</span></h2>
+            </div>
+
+            <div class="experience-grid-new">
+                <div class="exp-new">
+                    <div class="exp-new-marker"></div>
+                    <div class="exp-new-content glass">
+                        <div class="exp-new-header">
+                            <h3>Medical Virtual Assistant</h3>
+                            <span class="exp-new-company">Clinix Support Academy · Part-time · Remote</span>
+                            <span class="exp-new-date">May 2025 – Present · 1 yr 4 mos</span>
+                        </div>
+                        <p>Providing virtual medical assistance including medical scribing, EHR management, and document
+                            management for healthcare providers.</p>
+                        <div class="exp-new-stats">
+                            <span><i class="fas fa-file-medical"></i> Medical Scribing</span>
+                            <span><i class="fas fa-database"></i> EHR Management</span>
+                        </div>
+                        <div class="exp-new-skills">
+                            <span>Medical Scribing</span>
+                            <span>EHR</span>
+                            <span>Document Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-new">
+                    <div class="exp-new-marker"></div>
+                    <div class="exp-new-content glass">
+                        <div class="exp-new-header">
+                            <h3>Nursing Instructor / Clinical Instructor</h3>
+                            <span class="exp-new-company">Blue Petals College · Full-time · Lagos</span>
+                            <span class="exp-new-date">Sep 2024 – Present · 2 yrs</span>
+                        </div>
+                        <p>Teaching and mentoring nursing students in clinical skills including BLS, phlebotomy,
+                            medication administration, and patient care.</p>
+                        <div class="exp-new-stats">
+                            <span><i class="fas fa-user-graduate"></i> Clinical Education</span>
+                            <span><i class="fas fa-heart"></i> BLS Instructor</span>
+                        </div>
+                        <div class="exp-new-skills">
+                            <span>BLS</span>
+                            <span>Phlebotomy</span>
+                            <span>Medication Admin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-new">
+                    <div class="exp-new-marker"></div>
+                    <div class="exp-new-content glass">
+                        <div class="exp-new-header">
+                            <h3>Provider Relations Manager</h3>
+                            <span class="exp-new-company">Hygeia HMO · Full-time · Lagos State</span>
+                            <span class="exp-new-date">Jan 2022 – Jan 2026 · 4 yrs 1 mo</span>
+                        </div>
+                        <p>Managed provider relations, communication, and patient safety initiatives across the HMO
+                            network.</p>
+                        <div class="exp-new-stats">
+                            <span><i class="fas fa-handshake"></i> Provider Relations</span>
+                            <span><i class="fas fa-shield-alt"></i> Patient Safety</span>
+                        </div>
+                        <div class="exp-new-skills">
+                            <span>Communication</span>
+                            <span>Patient Safety</span>
+                            <span>Provider Relations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-new">
+                    <div class="exp-new-marker"></div>
+                    <div class="exp-new-content glass">
+                        <div class="exp-new-header">
+                            <h3>Assistant Lecturer</h3>
+                            <span class="exp-new-company">ESEP-LE BERGER · Part-time · Benin Republic</span>
+                            <span class="exp-new-date">Dec 2021 – Sep 2023 · 1 yr 10 mos</span>
+                        </div>
+                        <p>Delivered academic instruction in nursing and healthcare subjects, developing research skills
+                            and Microsoft Office proficiency.</p>
+                        <div class="exp-new-stats">
+                            <span><i class="fas fa-chalkboard-teacher"></i> Academic Instruction</span>
+                            <span><i class="fas fa-flask"></i> Research Skills</span>
+                        </div>
+                        <div class="exp-new-skills">
+                            <span>Microsoft Office</span>
+                            <span>Research Skills</span>
+                            <span>Education</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-new">
+                    <div class="exp-new-marker"></div>
+                    <div class="exp-new-content glass">
+                        <div class="exp-new-header">
+                            <h3>Registered Nurse</h3>
+                            <span class="exp-new-company">Akanbi Memorial Hospital · Full-time · Lagos State</span>
+                            <span class="exp-new-date">Jan 2021 – Jan 2022 · 1 yr 1 mo</span>
+                        </div>
+                        <p>Provided comprehensive patient care including phlebotomy, ventilation, and tracheostomy care.
+                        </p>
+                        <div class="exp-new-stats">
+                            <span><i class="fas fa-user-md"></i> Patient Care</span>
+                            <span><i class="fas fa-syringe"></i> Phlebotomy</span>
+                        </div>
+                        <div class="exp-new-skills">
+                            <span>Patient Care</span>
+                            <span>Phlebotomy</span>
+                            <span>Ventilation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-new">
+                    <div class="exp-new-marker"></div>
+                    <div class="exp-new-content glass">
+                        <div class="exp-new-header">
+                            <h3>Registered Nurse</h3>
+                            <span class="exp-new-company">Excel Medical Centre Mowe · Full-time</span>
+                            <span class="exp-new-date">Jun 2019 – Sep 2019 · 4 mos</span>
+                        </div>
+                        <p>Provided direct patient care with a focus on phlebotomy and patient assessment.</p>
+                        <div class="exp-new-stats">
+                            <span><i class="fas fa-user-md"></i> Patient Care</span>
+                            <span><i class="fas fa-syringe"></i> Phlebotomy</span>
+                        </div>
+                        <div class="exp-new-skills">
+                            <span>Patient Care</span>
+                            <span>Phlebotomy</span>
+                            <span>Patient Assessment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="skills-section reveal" id="skills">
+        <div class="container">
+            <span class="section-tag">Skills</span>
+            <h2 class="section-title">Clinical &amp; <span>Administrative</span></h2>
+            <p class="section-sub">Proficiency across clinical, administrative, and technical skills.</p>
+
+            <div class="skills-grid-alt">
+                <div class="skill-group">
+                    <h3><i class="fas fa-user-md" style="color:var(--accent);"></i> Clinical Skills</h3>
+                    <div class="skill-item">
+                        <span>Patient Care</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Phlebotomy</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Basic Life Support (BLS)</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Medication Administration</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:92%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Tracheostomy &amp; Ventilation</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:85%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3><i class="fas fa-laptop-medical" style="color:var(--accent);"></i> Administrative &amp; Tech
+                    </h3>
+                    <div class="skill-item">
+                        <span>Electronic Health Records (EHR)</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Medical Scribing</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:92%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Telehealth</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Medical Billing &amp; Insurance</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:88%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Client Onboarding &amp; Document Management</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:90%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3><i class="fas fa-hand-holding-heart" style="color:var(--accent);"></i> Soft Skills</h3>
+                    <div class="skill-item">
+                        <span>Communication</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Patient Safety</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:98%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Research Skills</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Team Collaboration</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:92%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WORK (Case Studies) ===== -->
+    <section class="work reveal" id="work">
+        <div class="container">
+            <div class="work-header">
+                <span class="section-tag">Case Studies</span>
+                <h2 class="section-title">Tasked. Managed. <span>Delivered.</span></h2>
+                <p class="section-sub">Click any card to view the full case study.</p>
+            </div>
+
+            <div class="work-grid-new">
+                <div class="work-new glass" data-case="telehealth">
+                    <div class="work-new-icon"><i class="fas fa-video"></i></div>
+                    <h3>Telehealth Implementation</h3>
+                    <p>Virtual care setup for a growing practice</p>
+                    <span class="work-new-cta">View case study →</span>
+                </div>
+
+                <div class="work-new glass" data-case="emr">
+                    <div class="work-new-icon"><i class="fas fa-file-medical"></i></div>
+                    <h3>EMR System Transition</h3>
+                    <p>Seamless migration to a new EHR platform</p>
+                    <span class="work-new-cta">View case study →</span>
+                </div>
+
+                <div class="work-new glass" data-case="workflow">
+                    <div class="work-new-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Workflow Optimization</h3>
+                    <p>Streamlining patient intake and scheduling</p>
+                    <span class="work-new-cta">View case study →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODAL ===== -->
+    <div class="modal-overlay" id="caseModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-content" id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- ===== WORK SAMPLES ===== -->
+    <section class="work-samples reveal" id="work-samples">
+        <div class="container">
+            <span class="section-tag">Work Samples</span>
+            <h2 class="section-title">My <span>Recent Work</span></h2>
+            <p class="section-sub">A glimpse into projects I've delivered for healthcare clients.</p>
+
+            <div class="work-samples-carousel-wrapper">
+                <div class="work-samples-track" id="workSamplesTrack">
+                    <!-- 1. Calendar Coordination -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/calendar_cordination.png" alt="Calendar Coordination" />
+                            <div class="work-sample-overlay">
+                                <h3>Calendar Coordination</h3>
+                                <p>Administrative · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2. Telehealth Dashboard -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/telehealth_dashboard.png" alt="Telehealth Dashboard" />
+                            <div class="work-sample-overlay">
+                                <h3>Telehealth Dashboard</h3>
+                                <p>Virtual Care · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3. Inbox Management -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/inbox_management.jpg" alt="Inbox Management" />
+                            <div class="work-sample-overlay">
+                                <h3>Inbox Management</h3>
+                                <p>Administrative · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4. Insurance Verification -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/insurance_verification.png" alt="Insurance Verification" />
+                            <div class="work-sample-overlay">
+                                <h3>Insurance Verification</h3>
+                                <p>Administrative · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5. Appointment Scheduler -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/appointment_scheduler.png" alt="Appointment Scheduler" />
+                            <div class="work-sample-overlay">
+                                <h3>Appointment Scheduler</h3>
+                                <p>Administrative · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6. EHR Management System -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/EHR_mgt_sys.png" alt="EHR Management" />
+                            <div class="work-sample-overlay">
+                                <h3>EHR Management System</h3>
+                                <p>Medical Records · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7. HIPAA Compliance Checklist -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/HIPAA_compliance_checklist.png" alt="HIPAA Compliance" />
+                            <div class="work-sample-overlay">
+                                <h3>HIPAA Compliance Checklist</h3>
+                                <p>Compliance · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8. Telehealth Patient Guide -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/Telehealth patient guide.png" alt="Telehealth Patient Guide" />
+                            <div class="work-sample-overlay">
+                                <h3>Telehealth Patient Guide</h3>
+                                <p>Patient Education · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 9. Care Coordination System -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/care_cordination_sys.png" alt="Care Coordination" />
+                            <div class="work-sample-overlay">
+                                <h3>Care Coordination System</h3>
+                                <p>Patient Care · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 10. Patient Assessment -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/patient_assesment.png" alt="Patient Assessment" />
+                            <div class="work-sample-overlay">
+                                <h3>Patient Assessment</h3>
+                                <p>Clinical · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 11. Medication Sheet Tracker -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/medication sheet tracker.png" alt="Medication Sheet Tracker" />
+                            <div class="work-sample-overlay">
+                                <h3>Medication Sheet Tracker</h3>
+                                <p>Administrative · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 12. SOAP Notes -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/SOAP NOTES.png" alt="SOAP Notes" />
+                            <div class="work-sample-overlay">
+                                <h3>SOAP Notes</h3>
+                                <p>Clinical Documentation · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== DUPLICATES FOR SEAMLESS LOOP ===== -->
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/calendar_cordination.png" alt="Calendar Coordination" />
+                            <div class="work-sample-overlay">
+                                <h3>Calendar Coordination</h3>
+                                <p>Administrative · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/telehealth_dashboard.png" alt="Telehealth Dashboard" />
+                            <div class="work-sample-overlay">
+                                <h3>Telehealth Dashboard</h3>
+                                <p>Virtual Care · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/inbox_management.jpg" alt="Inbox Management" />
+                            <div class="work-sample-overlay">
+                                <h3>Inbox Management</h3>
+                                <p>Administrative · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/insurance_verification.png" alt="Insurance Verification" />
+                            <div class="work-sample-overlay">
+                                <h3>Insurance Verification</h3>
+                                <p>Administrative · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/appointment_scheduler.png" alt="Appointment Scheduler" />
+                            <div class="work-sample-overlay">
+                                <h3>Appointment Scheduler</h3>
+                                <p>Administrative · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/EHR_mgt_sys.png" alt="EHR Management" />
+                            <div class="work-sample-overlay">
+                                <h3>EHR Management System</h3>
+                                <p>Medical Records · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/HIPAA_compliance_checklist.png" alt="HIPAA Compliance" />
+                            <div class="work-sample-overlay">
+                                <h3>HIPAA Compliance Checklist</h3>
+                                <p>Compliance · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/Telehealth patient guide.png" alt="Telehealth Patient Guide" />
+                            <div class="work-sample-overlay">
+                                <h3>Telehealth Patient Guide</h3>
+                                <p>Patient Education · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/care_cordination_sys.png" alt="Care Coordination" />
+                            <div class="work-sample-overlay">
+                                <h3>Care Coordination System</h3>
+                                <p>Patient Care · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/patient_assesment.png" alt="Patient Assessment" />
+                            <div class="work-sample-overlay">
+                                <h3>Patient Assessment</h3>
+                                <p>Clinical · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/medication sheet tracker.png" alt="Medication Sheet Tracker" />
+                            <div class="work-sample-overlay">
+                                <h3>Medication Sheet Tracker</h3>
+                                <p>Administrative · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-sample-item">
+                        <div class="work-sample-image">
+                            <img src="./assets/SOAP NOTES.png" alt="SOAP Notes" />
+                            <div class="work-sample-overlay">
+                                <h3>SOAP Notes</h3>
+                                <p>Clinical Documentation · 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials reveal" id="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Clients <span>Say</span></h2>
+            </div>
+
+            <div class="testimonial-carousel-wrapper">
+                <div class="testimonial-carousel-track" id="testimonialCarouselTrack">
+                    <!-- 1 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>Jesuje transformed our practice's administrative workflow. His attention to detail and
+                                clinical knowledge made a significant difference in our daily operations.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">D</div>
+                                <div>
+                                    <strong>Dr. Adebayo</strong>
+                                    <span>Clinic Director</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>His expertise in EMR systems and patient coordination has been invaluable. He helped us
+                                reduce scheduling conflicts and improve patient satisfaction.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">S</div>
+                                <div>
+                                    <strong>Dr. Stella</strong>
+                                    <span>Practice Owner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>Jesuje is a dedicated professional who brings calm and clarity to our busy practice. His
+                                clinical insight and operational precision are exceptional.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">M</div>
+                                <div>
+                                    <strong>Dr. Michael</strong>
+                                    <span>Medical Director</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>His ability to design scalable systems for telehealth coordination and medical
+                                documentation has been a game-changer for our practice.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">O</div>
+                                <div>
+                                    <strong>Dr. Olu</strong>
+                                    <span>Clinic Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>I highly recommend Jesuje for any medical practice looking to streamline operations. He's
+                                reliable, knowledgeable, and truly cares about his work.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">F</div>
+                                <div>
+                                    <strong>Dr. Faith</strong>
+                                    <span>Healthcare Administrator</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>As a Nursing Instructor, Jesuje has demonstrated exceptional teaching skills. His
+                                students consistently perform well in clinical skills assessments.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">P</div>
+                                <div>
+                                    <strong>Prof. Chidi</strong>
+                                    <span>Nursing Educator</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>His work as a Provider Relations Manager was outstanding. He improved communication
+                                between our HMO and healthcare providers significantly.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">G</div>
+                                <div>
+                                    <strong>Dr. Grace</strong>
+                                    <span>HMO Director</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>During his time at Akanbi Memorial Hospital, Jesuje provided exceptional patient care.
+                                His clinical skills and compassion are commendable.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">J</div>
+                                <div>
+                                    <strong>Dr. James</strong>
+                                    <span>Hospital Administrator</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 9 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>As an Assistant Lecturer, Jesuje brought practical clinical experience to the classroom.
+                                His students benefited greatly from his real-world insights.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">B</div>
+                                <div>
+                                    <strong>Dr. Bola</strong>
+                                    <span>Academic Dean</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 10 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>Jesuje's virtual assistance has been a lifesaver for my practice. He handles patient
+                                coordination and documentation with exceptional efficiency.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">T</div>
+                                <div>
+                                    <strong>Dr. Tunde</strong>
+                                    <span>Primary Care Physician</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 11 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>His telehealth coordination skills are top-notch. He made our virtual care transition
+                                seamless and our patients feel comfortable with the technology.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">N</div>
+                                <div>
+                                    <strong>Dr. Ngozi</strong>
+                                    <span>Telehealth Specialist</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 12 -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>Jesuje's dedication to patient safety and quality care is truly inspiring. He is an asset
+                                to any healthcare team he joins.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">E</div>
+                                <div>
+                                    <strong>Dr. Emeka</strong>
+                                    <span>Medical Director</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DUPLICATES FOR SEAMLESS LOOP -->
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>Jesuje transformed our practice's administrative workflow. His attention to detail and
+                                clinical knowledge made a significant difference in our daily operations.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">D</div>
+                                <div>
+                                    <strong>Dr. Adebayo</strong>
+                                    <span>Clinic Director</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-content glass">
+                            <div class="testimonial-carousel-quote">"</div>
+                            <p>His expertise in EMR systems and patient coordination has been invaluable. He helped us
+                                reduce scheduling conflicts and improve patient satisfaction.</p>
+                            <div class="testimonial-carousel-author">
+                                <div class="testimonial-carousel-avatar">S</div>
+                                <div>
+                                    <strong>Dr. Stella</strong>
+                                    <span>Practice Owner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-carousel-dots" id="testimonialDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="certifications reveal" id="certifications">
+        <div class="container">
+            <span class="section-tag">Licenses &amp; Credentials</span>
+            <h2 class="section-title">Professional <span>Credentials</span></h2>
+            <p class="section-sub">Verified certifications and licenses that support my clinical and administrative
+                expertise.</p>
+
+            <div class="certifications-grid-text">
+                <div class="cert-card-text">
+                    <div class="cert-icon-text"><i class="fas fa-user-md"></i></div>
+                    <h3>Registered Nurse (Nigeria)</h3>
+                    <p>Nursing and Midwifery Council of Nigeria</p>
+                    <span class="cert-badge-text">Issued 2020 · Active</span>
+                </div>
+                <div class="cert-card-text">
+                    <div class="cert-icon-text"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Bachelor of Nursing Science (BNSc)</h3>
+                    <p>Institut de Santé</p>
+                    <span class="cert-badge-text">2014 – 2019</span>
+                </div>
+                <div class="cert-card-text">
+                    <div class="cert-icon-text"><i class="fas fa-shield-alt"></i></div>
+                    <h3>HIPAA Certification</h3>
+                    <p>HIPAA Training · Privacy &amp; Security</p>
+                    <span class="cert-badge-text">Issued 2024</span>
+                </div>
+                <div class="cert-card-text">
+                    <div class="cert-icon-text"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Basic Life Support (BLS)</h3>
+                    <p>Certified Instructor · CPR &amp; AED</p>
+                    <span class="cert-badge-text">Current Certification</span>
+                </div>
+                <div class="cert-card-text">
+                    <div class="cert-icon-text"><i class="fas fa-video"></i></div>
+                    <h3>Telehealth Training Certificate</h3>
+                    <p>Virtual Care Delivery &amp; Coordination</p>
+                    <span class="cert-badge-text">Issued 2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BOOKING ===== -->
+    <section class="booking-section reveal" id="booking">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="booking-header">
+                    <span class="section-tag">Book a Session</span>
+                    <h2 class="section-title">Let's <span>Connect</span></h2>
+                    <p>Ready to streamline your healthcare operations? Choose the best way to reach me.</p>
+                </div>
+
+                <div class="booking-pills-grid">
+                    <a href="https://calendly.com/ojesuje/seamless-administrative-med-va" target="_blank"
+                        class="booking-pill magnetic-btn" data-strength="15">
+                        <span class="pill-icon"><i class="fas fa-calendar-check"></i></span>
+                        <span class="pill-text">Schedule a Call</span>
+                        <span class="pill-sub">30-min discovery session</span>
+                    </a>
+
+                    <a href="mailto:Ojesuje@outlook.com" class="booking-pill magnetic-btn" data-strength="15">
+                        <span class="pill-icon"><i class="fas fa-envelope"></i></span>
+                        <span class="pill-text">Send an Email</span>
+                        <span class="pill-sub">Ojesuje@outlook.com</span>
+                    </a>
+
+                    <a href="https://wa.me/2347062385125" target="_blank" class="booking-pill magnetic-btn"
+                        data-strength="15">
+                        <span class="pill-icon"><i class="fab fa-whatsapp"></i></span>
+                        <span class="pill-text">WhatsApp Me</span>
+                        <span class="pill-sub">Instant messaging</span>
+                    </a>
+
+                    <a href="./assets/Jesuje_Resume.pdf" download class="booking-pill magnetic-btn" data-strength="15">
+                        <span class="pill-icon"><i class="fas fa-download"></i></span>
+                        <span class="pill-text">Download Resume</span>
+                        <span class="pill-sub">PDF version</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact reveal" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-left">
+                    <span class="section-tag">Connect</span>
+                    <h2 class="section-title">Let's <span>Simplify Healthcare</span></h2>
+                    <p>Ready to streamline your healthcare operations? I'm here to handle the details so you can focus
+                        on what matters most – patient care.</p>
+                    <p style="font-weight: 500; color: var(--primary);">Whether you need clinical support,
+                        administrative assistance, or telehealth coordination, I'd love to learn about your needs and
+                        explore how we can work together.</p>
+                    <div class="contact-social">
+                        <a href="https://github.com/Olusegun-J" target="_blank" aria-label="GitHub" class="magnetic-btn"
+                            data-strength="20"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/jesuje-olusegun-44242b208" target="_blank"
+                            aria-label="LinkedIn" class="magnetic-btn" data-strength="20"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:Ojesuje@outlook.com" target="_blank" aria-label="Email" class="magnetic-btn"
+                            data-strength="20"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+2347062385125" target="_blank" aria-label="Phone" class="magnetic-btn"
+                            data-strength="20"><i class="fas fa-phone"></i></a>
+                        <a href="https://calendly.com/ojesuje/seamless-administrative-med-va" target="_blank"
+                            aria-label="Calendly" class="magnetic-btn" data-strength="20"><i
+                                class="fas fa-calendar-plus"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form id="contactForm" action="https://formspree.io/f/xljrbjvl" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your name" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email address" required />
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message"
+                                placeholder="Tell me about your healthcare practice and what support you need..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block magnetic-btn" data-strength="15">Send
+                            Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Jesuje Olusegun · Registered Nurse &amp; Medical Virtual Assistant</p>
+            <p class="footer-tagline">Bringing calm and clarity to busy medical practices.</p>
+            <p class="footer-links">
+                <a href="https://github.com/Olusegun-J" target="_blank">GitHub</a> ·
+                <a href="https://www.linkedin.com/in/jesuje-olusegun-44242b208" target="_blank">LinkedIn</a> ·
+                <a href="https://calendly.com/ojesuje/seamless-administrative-med-va" target="_blank">Calendly</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
